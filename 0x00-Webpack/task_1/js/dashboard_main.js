@@ -10,8 +10,8 @@ $("<p id='count'></p>").appendTo('body');
 $("<p>Copyright - Holberton School</p>").appendTo('body');
 
 function updateCounter() {
-    counter ++;
-    document.getElementById('count').innerText = `${counter}  clicks on the button`;
+  counter ++;
+  document.getElementById('count').innerText = `${counter}  clicks on the button`;
 }
 
 document.querySelector("button").addEventListener("click", _.debounce(updateCounter))
