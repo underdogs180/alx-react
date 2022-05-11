@@ -1,0 +1,18 @@
+.App-header {
+    border-bottom: 3px solid #e1354b;
+    height: 250px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.App-header img {
+    width: 200px;
+    height: 200px;
+}
+
+.App-header h1 {
+    display: inline;
+    position: relative;
+    color: #e1354b;
+}

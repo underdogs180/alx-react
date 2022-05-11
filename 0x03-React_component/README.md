@@ -1,1 +1,1 @@
-#0x03. React component project 
+This is a README for my 0x02-react_props project!
