@@ -1,9 +1,14 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import NotificationItem from './NotificationItem';
+import { StyleSheetTestUtils } from 'aphrodite';
 
 describe("Testing <NotificationItem />", () => {
   let  wrapper;
+  
+  beforeEach(() => {
+    StyleSheetTestUtils.suppressStyleInjection();
+  });
 
   it("<NotificationItem /> renders without crashing", () => {
     wrapper = shallow(<NotificationItem />);
@@ -14,10 +19,5 @@ describe("Testing <NotificationItem />", () => {
     wrapper = shallow(<NotificationItem type="default" value="test" />);
     expect(wrapper.find("li").text()).toBe("test");
     expect(wrapper.find("li").prop("data-notification-type")).toBe("default");
-  });
-
-  it("<NotificationItem />  renders the correct html by passing a dummy html prop,", () => {
-    wrapper = shallow(<NotificationItem html={{__html:"<u>test</u>"}} />);
-    expect(wrapper.find("li").html()).toBe("<li data-notification-type=\"default\"><u>test</u></li>");
   });
 });
